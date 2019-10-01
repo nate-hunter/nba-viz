@@ -10,4 +10,5 @@ public class NbaVizApplication {
 		SpringApplication.run(NbaVizApplication.class, args);
 	}
 
+
 }

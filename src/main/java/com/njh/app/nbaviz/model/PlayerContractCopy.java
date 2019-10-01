@@ -1,0 +1,55 @@
+package com.njh.app.nbaviz.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import java.util.HashMap;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Entity
+public class PlayerContractCopy {
+
+    public static int playerCount;
+
+    @Id
+    @GeneratedValue
+    private Long id;
+    private String name;
+    private int age;
+    private String link;
+//    private String teamAccr;
+    private String teamAbrev;
+    private HashMap<String, String> contractStr;
+    private String guaranteedStr;
+    private HashMap<String, String> contract;
+    private String guaranteed;
+
+    public PlayerContractCopy(String name, String link, String teamAbrev, HashMap<String, String> contract, String guaranteedStr) {
+        this.name = name;
+        this.link = link;
+        this.teamAbrev = teamAbrev;
+        this.contractStr = contract;
+        this.guaranteedStr = guaranteedStr;
+        playerCount++;
+    }
+
+    public PlayerContractCopy(String name, String link, String teamAbrev, HashMap<String, String> contractStr, String guaranteedStr, HashMap<String, String> contract, String guaranteed) {
+        this.name = name;
+        this.link = link;
+        this.teamAbrev = teamAbrev;
+        this.contractStr = contractStr;
+        this.guaranteedStr = guaranteedStr;
+        this.contract = contract;
+        this.guaranteed = guaranteed;
+        playerCount++;
+    }
+
+}
