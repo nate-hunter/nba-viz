@@ -2,7 +2,6 @@ package com.njh.app.nbaviz.model;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -56,13 +55,6 @@ public class Team {
         this.link = link;
         this.logo = logo;
     }
-
-//    public Team(String teamName, String teamAbbr, String link, String season) {
-//        this.teamName = teamName;
-//        this.teamAbbr = teamAbbr;
-//        this.link = link;
-//        this.season = season;
-//    }
 
     public Team(String teamName, String teamAbbr, String link, List<PlayerContract> playerContracts) {
         this.teamName = teamName;

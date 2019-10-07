@@ -28,6 +28,7 @@ public class TeamController {
     }
 
     @GetMapping("/team/{id}")
+    @CrossOrigin(origins = "http://localhost:3000")
     ResponseEntity<Team> getTeam(@PathVariable Long id) {
         Optional<Team> team = teamRepository.findById(id);
         return team.map(response -> ResponseEntity.ok().body(response))

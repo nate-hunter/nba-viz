@@ -54,19 +54,19 @@ class Initializer implements CommandLineRunner {
             String teamAbbr = player.get("teamAbbr");
 
             HashMap<String, String> t = new HashMap<>();
-            String y2019Data = player.get("2019-2020_Data");
-            String y2020Data = player.get("2020-2021_Data");
-            String y2021Data = player.get("2021-2022_Data");
-            String y2022Data = player.get("2022-2023_Data");
-            String y2023Data = player.get("2023-2024_Data");
-            String y2024Data = player.get("2024-2025_Data");
-            contractValueList.put("2019-2020_Data", y2019Data);
-            contractValueList.put("2020-2021_Data", y2020Data);
-            contractValueList.put("2021-2022_Data", y2021Data);
-            contractValueList.put("2022-2023_Data", y2022Data);
-            contractValueList.put("2023-2024_Data", y2023Data);
-            contractValueList.put("2024-2025_Data", y2024Data);
-            String gtdData = player.get("guaranteed_Data");
+            String y2019Data = player.get("2019-2020");
+            String y2020Data = player.get("2020-2021");
+            String y2021Data = player.get("2021-2022");
+            String y2022Data = player.get("2022-2023");
+            String y2023Data = player.get("2023-2024");
+            String y2024Data = player.get("2024-2025");
+            contractValueList.put("2019-2020", y2019Data);
+            contractValueList.put("2020-2021", y2020Data);
+            contractValueList.put("2021-2022", y2021Data);
+            contractValueList.put("2022-2023", y2022Data);
+            contractValueList.put("2023-2024", y2023Data);
+            contractValueList.put("2024-2025", y2024Data);
+            String gtdData = player.get("guaranteed");
 
             PlayerContract p = new PlayerContract(playerName, link, teamAbbr, contractValueList, gtdData);
             playerList.add(p);
